@@ -24,7 +24,7 @@ fastify.post('/messages/:user_id', async (request, reply) => {
         //const data = await sendMessage(user_id, message)
 
         const data = request.body
-        reply.send({data})
+        reply.send(data)
 
     } catch (e) {
         reply.code(404).send({error: 'Something went wrong: '})
