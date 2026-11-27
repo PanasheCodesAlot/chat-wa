@@ -21,9 +21,9 @@ fastify.post('/messages/:user_id', async (request, reply) => {
         //console.log(request.body, user_id, 111)
         const { message } = request.body
 
-        const data = await sendMessage(user_id, message)
+        //const data = await sendMessage(user_id, message)
 
-        //const data = request.body
+        const data = request.body
         reply.send({data})
 
     } catch (e) {
